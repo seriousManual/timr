@@ -1,0 +1,21 @@
+{
+    "name": "timr",
+    "description": "cron like job scheduling library",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zaphod1984/timr.git"
+    },
+    "author": "Manuel Ernst <zaphod84@gmx.de>",
+    "dependencies": {},
+    "devDependencies": {
+        "mocha": "*",
+        "chai": "*",
+        "sinon": "*"
+    },
+    "main": "./index.js",
+    "keywords": ["cron", "schedule"],
+    "scripts": {
+        "test": "./node_modules/mocha/bin/mocha tests"
+    }
+}
