@@ -12,7 +12,7 @@ module.exports = function() {
         return myTask;
     };
 
-    tmpF._scheduler = myScheduler;
+    tmpF.scheduler = myScheduler;
 
     return tmpF;
 };
