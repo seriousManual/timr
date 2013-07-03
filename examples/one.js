@@ -4,7 +4,7 @@ var timr = require('../');
 
 var scheduler = timr();
 
-////every 5 seconds
+////every 15 seconds
 scheduler().every(15).seconds().run(function() {
     console.log( 'every 15 seconds' );
 });
