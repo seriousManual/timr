@@ -16,9 +16,12 @@ scheduler().every(15).seconds().run(function() {
 });
 
 //start 30 seconds from now, execute every 10 seconds, end in 5 minutes from now
+var from = moment).add('seconds', 30);
+var to = moment().add('minutes', 5);
+
 scheduler()
-    .from(moment().add('seconds', 30))
-    .to(moment().add('minutes', 5))
+    .from(from)
+    .to(to)
     .every(10).seconds()
     .run(function() {
         console.log( 'now+30s every 10s until now+5m' );
