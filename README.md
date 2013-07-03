@@ -8,24 +8,18 @@ var timr = require('../');
 
 var scheduler = timr();
 
-//every two minutes
-scheduler.every(2).minutes().run(function() {});
-//every minute
-scheduler.every().minute().run(function() {});
+////every 5 seconds
+scheduler().every(15).seconds().run(function() {
+    console.log( 'every 15 seconds' );
+});
 
-//every 10 seconds
-scheduler.every(10).seconds().run(function() {});
-
-//every hour
-scheduler.every().hour().run(function() {});
-
-//every 2 hours
-scheduler.every(2).hours().run(function() {});
-
-//every day
-scheduler.every().day().run(function() {});
-//every second day
-scheduler.every(2).days().run(function() {});
+scheduler()
+    .from(moment().add('seconds', 30))
+    .to(moment().add('minutes', 5))
+    .every(10).seconds()
+    .run(function() {
+        console.log( 'now+30s every 10s until now+5m' );
+    });
 ```
 
 ## tests
