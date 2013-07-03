@@ -7,11 +7,11 @@
         "url": "https://github.com/zaphod1984/timr.git"
     },
     "author": "Manuel Ernst <zaphod84@gmx.de>",
-    "dependencies": {},
+    "dependencies": {
+        "moment": "*"
+    },
     "devDependencies": {
-        "mocha": "*",
-        "chai": "*",
-        "sinon": "*"
+
     },
     "main": "./index.js",
     "keywords": ["cron", "schedule"],
