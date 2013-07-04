@@ -31,7 +31,7 @@ scheduler()
 ## scheduler
 a scheduler holds a collection of tasks. every task is created via the task construction function.
 
-### create a task construction function
+### creates a task construction function
 ```javascript
 var timr = require('../');
 
@@ -53,8 +53,67 @@ var timr = require('../');
 
 var taskConstructor = timr();
 
+//...create some tasks...
+
 taskConstructor.scheduler.on('execute', function(name, task) {
     //universal handler for all tasks attached to the scheduler
+});
+```
+
+## task
+
+### creation
+tasks geht automatically attached to the parent scheduler object
+```javascript
+var myTask = taskConstructor();
+```
+
+there are multiple ways of invoking a task.
+
+#### anonymous (one callback)
+creates the task, configures it to run every minute and runs the callback assigned in the run handler
+```javascript
+taskConstructor().every().minute().run(function() { ... });
+```
+
+#### anonymous (multiple callback)
+creates the task, configures it to run every minute and runs each callback.
+```javascript
+taskConstructor()
+  .every().minute()
+  .run(function() { ... })
+  .run(function() { ... })
+  .run(function() { ... });
+```
+
+#### named (event handler attached to the task)
+creates the task, configures it to run every minute and runs the callback assigned in the run handler.
+
+ `run` has to be called.
+```javascript
+var myTask = taskConstructor().every().minute();
+
+myTask.on('execute', function() {
+  // ...
+});
+
+myTask.on('execute', function() {
+  // ...
+});
+
+myTask.run();
+```
+
+#### event handler attached to the scheduler
+creates the task, configures it to run every minute and runs the callback assigned in the run handler.
+
+ `run` has to be called.
+```javascript
+taskConstructor().every().minute().run();
+taskConstructor().every(2).hours().run();
+
+taskConstructor.scheduler.on('execute', function(name, task) {
+  // gets invoked every minute and every second hour
 });
 ```
 
