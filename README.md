@@ -2,6 +2,10 @@
 
 timr offers a scheduling interface for a cron like job execution.
 
+## installation
+
+```npm install timr```
+
 ## example
 ```javascript
 var moment = require('moment');
