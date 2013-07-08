@@ -1,5 +1,7 @@
 # timr
 
+[![Build Status](https://travis-ci.org/zaphod1984/timr.png)](https://travis-ci.org/zaphod1984/timr)
+
 timr offers a scheduling interface for a cron like job execution.
 
 ## installation
