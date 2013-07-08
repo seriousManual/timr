@@ -1,14 +1,14 @@
 {
     "name": "timr",
     "description": "cron like job scheduling library",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repository": {
         "type": "git",
         "url": "https://github.com/zaphod1984/timr.git"
     },
     "author": "Manuel Ernst <zaphod84@gmx.de>",
     "dependencies": {
-        "moment": "*"
+        "moment": "2.1.0"
     },
     "devDependencies": {
         "sinon": "*",
