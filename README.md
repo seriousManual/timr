@@ -20,7 +20,7 @@ scheduler().every(15).seconds().run(function() {
 });
 
 //start 30 seconds from now, execute every 10 seconds, end in 5 minutes from now
-var from = moment).add('seconds', 30);
+var from = moment().add('seconds', 30);
 var to = moment().add('minutes', 5);
 
 scheduler()
