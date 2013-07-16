@@ -84,7 +84,7 @@ creates the task, configures it to run every minute and runs the callback assign
 taskConstructor().every().minute().run(function() { ... });
 ```
 
-#### anonymous (multiple callback)
+#### anonymous (multiple callbacks)
 creates the task, configures it to run every minute and runs each callback.
 ```javascript
 taskConstructor()
