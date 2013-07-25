@@ -52,28 +52,40 @@ describe('timr', function() {
             });
         });
 
+        describe('identification', function() {
+            var myTask;
+            var NAME = 'foo';
 
+            beforeEach(function() {
+                myTask = new Task();
+            });
 
+            it('should set a name', function() {
+                myTask.name(NAME);
+                expect(myTask._name).to.equal(NAME);
+            });
 
+            it('should create a name', function() {
+                myTask._from = moment('2013-01-01');
+                myTask._interval = 'm';
+                myTask._modifier = '1';
 
-//        describe('create date', function() {
-//           var myTask;
-//
-//            beforeEach(function() {
-//                myTask = new Task();
-//            });
-//
-//            it('should', function() {
-//                var now = moment().format();
-//
-//                myTask.every(10).seconds();
-//
-//                console.log( now );
-//                console.log( myTask._calculateNextRun().format() );
-//            });
-//
-//        });
-//
+                expect(myTask._createName()).to.equal('2013-01-01T00:00:00+01:00-x_m_1');
+            });
+
+            it('should return the name if set', function() {
+                myTask.name(NAME);
+                expect(myTask.ident()).to.equal(NAME);
+            });
+
+            it('should return the created name if no name is set', function() {
+                myTask._from = moment('2013-01-01');
+                myTask._interval = 'm';
+                myTask._modifier = '1';
+
+                expect(myTask.ident()).to.equal('2013-01-01T00:00:00+01:00-x_m_1');
+            });
+        });
     });
 
 });
