@@ -66,11 +66,12 @@ describe('timr', function() {
             });
 
             it('should create a name', function() {
-                myTask._from = moment('2013-01-01T00:00:00+0100');
+                var from = moment('2013-01-01');
+                myTask._from = from;
                 myTask._interval = 'm';
                 myTask._modifier = '1';
 
-                expect(myTask._createName()).to.equal('2013-01-01T00:00:00+01:00-x_m_1');
+                expect(myTask.ident()).to.equal(from.format() + '-x_m_1');
             });
 
             it('should return the name if set', function() {
@@ -79,11 +80,12 @@ describe('timr', function() {
             });
 
             it('should return the created name if no name is set', function() {
-                myTask._from = moment('2013-01-01T00:00:00+0100');
+                var from = moment('2013-01-01');
+                myTask._from = from;
                 myTask._interval = 'm';
                 myTask._modifier = '1';
 
-                expect(myTask.ident()).to.equal('2013-01-01T00:00:00+01:00-x_m_1');
+                expect(myTask.ident()).to.equal(from.format() + '-x_m_1');
             });
         });
     });
