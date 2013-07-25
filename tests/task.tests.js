@@ -66,7 +66,7 @@ describe('timr', function() {
             });
 
             it('should create a name', function() {
-                myTask._from = moment('2013-01-01');
+                myTask._from = moment('2013-01-01T00:00:00+0100');
                 myTask._interval = 'm';
                 myTask._modifier = '1';
 
@@ -79,7 +79,7 @@ describe('timr', function() {
             });
 
             it('should return the created name if no name is set', function() {
-                myTask._from = moment('2013-01-01');
+                myTask._from = moment('2013-01-01T00:00:00+0100');
                 myTask._interval = 'm';
                 myTask._modifier = '1';
 
