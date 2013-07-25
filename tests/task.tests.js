@@ -26,7 +26,7 @@ describe('timr', function() {
 
                 expect(testTask1._from.format()).to.equal(nowMoment.format());
                 expect(testTask2._from.format()).to.equal(nowMoment.format());
-                expect(testTask2._from.format()).to.equal(nowMoment.format());
+                expect(testTask3._from.format()).to.equal(nowMoment.format());
             });
         });
 
@@ -48,7 +48,7 @@ describe('timr', function() {
 
                 expect(testTask1._to.format()).to.equal(nowMoment.format());
                 expect(testTask2._to.format()).to.equal(nowMoment.format());
-                expect(testTask2._to.format()).to.equal(nowMoment.format());
+                expect(testTask3._to.format()).to.equal(nowMoment.format());
             });
         });
 
