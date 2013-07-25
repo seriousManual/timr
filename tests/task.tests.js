@@ -88,6 +88,24 @@ describe('timr', function() {
                 expect(myTask.ident()).to.equal(from.format() + '-x_m_1');
             });
         });
+
+        describe('execution', function() {
+            var myTask;
+            var event = false;
+
+            before(function() {
+                myTask = new Task();
+                myTask.on('execute', function() {
+                    event = true;
+                });
+
+                myTask.execute();
+            });
+
+            it('should emit an execution event', function() {
+                expect(event).to.be.true;
+            });
+        });
     });
 
 });
