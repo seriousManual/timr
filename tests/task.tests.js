@@ -106,6 +106,36 @@ describe('timr', function() {
                 expect(event).to.be.true;
             });
         });
+
+        describe('clear', function() {
+            var mock = {
+                clear: sinon.spy()
+            };
+
+            it('should should call clear on the Run', function() {
+                myTask = new Task();
+                myTask._currentRun = mock;
+
+                myTask.clear();
+
+                expect(mock.clear.called).to.be.true;
+            });
+        });
+
+        describe('scheduled', function() {
+            it('should return true', function() {
+                var t = new Task();
+                t._currentRun = true;
+
+                expect(t.scheduled()).to.be.true;
+            });
+
+            it('should return false', function() {
+                var t = new Task();
+
+                expect(t.scheduled()).to.be.false;
+            });
+        })
     });
 
 });
