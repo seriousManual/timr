@@ -1,8 +1,8 @@
 # timr
 
 [![Build Status](https://travis-ci.org/zaphod1984/timr.png)](https://travis-ci.org/zaphod1984/timr)
-[![NPM version](https://badge.fury.io/js/timr.png)](http://badge.fury.io/js/timr)
-[![dependecy status](https://david-dm.org/zaphod1984/timr.png)](https://david-dm.org/)
+
+[![NPM](https://nodei.co/npm/timr.png)](https://nodei.co/npm/timr/)
 
 timr offers a scheduling interface for a cron like job execution.
 
