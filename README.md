@@ -4,6 +4,8 @@
 
 [![NPM](https://nodei.co/npm/timr.png)](https://nodei.co/npm/timr/)
 
+[![NPM](https://nodei.co/npm-dl/timr.png?months=3)](https://nodei.co/npm/timr/)
+
 timr offers a scheduling interface for a cron like job execution.
 
 ## installation
