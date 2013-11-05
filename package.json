@@ -1,23 +1,26 @@
 {
-    "name": "timr",
-    "description": "cron like job scheduling library",
-    "version": "0.1.7",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/zaphod1984/timr.git"
-    },
-    "author": "Manuel Ernst <zaphod84@gmx.de>",
-    "dependencies": {
-        "moment": "2.1.0"
-    },
-    "devDependencies": {
-        "sinon": "*",
-        "mocha": "*",
-        "chai": "*"
-    },
-    "main": "./index.js",
-    "keywords": ["cron", "schedule"],
-    "scripts": {
-        "test": "./node_modules/mocha/bin/mocha tests"
-    }
+  "name": "timr",
+  "description": "cron like job scheduling library",
+  "version": "0.1.8",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaphod1984/timr.git"
+  },
+  "author": "Manuel Ernst <zaphod84@gmx.de>",
+  "dependencies": {
+    "moment": "2.1.0"
+  },
+  "devDependencies": {
+    "sinon": "*",
+    "mocha": "*",
+    "chai": "*"
+  },
+  "main": "./index.js",
+  "keywords": [
+    "cron",
+    "schedule"
+  ],
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha tests"
+  }
 }
