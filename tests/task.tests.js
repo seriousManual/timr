@@ -12,7 +12,7 @@ describe('timr', function() {
             it('should throw an error on invalid from date', function() {
                 expect(function() {
                     new Task().from('asdf');
-                }).to.throw();
+                }).to.throw(/invalid timestamp/);
             });
 
             it('should accept all kinds of dates', function() {
@@ -34,7 +34,7 @@ describe('timr', function() {
             it('should throw an error on invalid to date', function() {
                 expect(function() {
                     new Task().to('asdf');
-                }).to.throw();
+                }).to.throw(/invalid timestamp/);
             });
 
             it('should accept all kinds of dates', function() {
