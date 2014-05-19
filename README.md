@@ -1,6 +1,4 @@
-# timr
-
-[![Build Status](https://travis-ci.org/zaphod1984/timr.png)](https://travis-ci.org/zaphod1984/timr)
+# timr [![Build Status](https://travis-ci.org/zaphod1984/timr.png)](https://travis-ci.org/zaphod1984/timr)
 
 [![NPM](https://nodei.co/npm/timr.png)](https://nodei.co/npm/timr/)
 
@@ -10,7 +8,9 @@ timr offers a scheduling interface for a cron like job execution.
 
 ## installation
 
-```npm install timr```
+````bash
+npm install timr
+````
 
 ## example
 ```javascript
