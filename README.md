@@ -16,7 +16,7 @@ npm install timr
 ```javascript
 var moment = require('moment');
 
-var timr = require('../');
+var timr = require('timr');
 
 var scheduler = timr();
 
@@ -43,14 +43,14 @@ a scheduler holds a collection of tasks. every task is created via the task cons
 
 ### creates a task construction function
 ```javascript
-var timr = require('../');
+var timr = require('timr');
 
 var taskConstructor = timr();
 ```
 
 the scheduler object is exposed at the task constructor:
 ```javascript
-var timr = require('../');
+var timr = require('timr');
 
 var taskConstructor = timr();
 
@@ -59,7 +59,7 @@ console.log( taskConstructor.scheduler );
 
 when a attached task is executed, the parent scheduler also emits a execution event
 ```javascript
-var timr = require('../');
+var timr = require('timr');
 
 var taskConstructor = timr();
 
