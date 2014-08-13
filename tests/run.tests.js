@@ -9,7 +9,7 @@ describe('Run', function() {
     it('should execute', function() {
         var clock = sinon.useFakeTimers();
 
-        var myRun = new Run(moment().add('seconds', 10));
+        var myRun = new Run(moment().add(10, 'seconds'));
 
         var executionSpy = sinon.spy();
         myRun.execute(executionSpy);
@@ -25,7 +25,7 @@ describe('Run', function() {
     it('should not execute when clearing', function() {
         var clock = sinon.useFakeTimers();
 
-        var myRun = new Run(moment().add('seconds', 10));
+        var myRun = new Run(moment().add(10, 'seconds'));
 
         var executionSpy = sinon.spy();
         myRun.execute(executionSpy);
@@ -46,7 +46,7 @@ describe('Run', function() {
         var oldMaxTimeout = Run.MAX_TIMEOUT;
         Run.MAX_TIMEOUT = 5000;
 
-        var myRun = new Run(moment().add('seconds', 15));
+        var myRun = new Run(moment().add(15, 'seconds'));
 
         var stepSpy = sinon.spy();
         myRun._stepCallback = stepSpy;

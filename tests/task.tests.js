@@ -5,10 +5,8 @@ var moment = require('moment');
 var Task = require('../lib/Task');
 
 describe('timr', function() {
-
     describe('tasks', function() {
-
-        describe('from', function() {
+        describe.only('from', function() {
             it('should throw an error on invalid from date', function() {
                 expect(function() {
                     new Task().from('asdf');
