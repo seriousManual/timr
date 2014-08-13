@@ -1,7 +1,7 @@
 {
   "name": "timr",
   "description": "cron like job scheduling library",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "repository": {
     "type": "git",
     "url": "https://github.com/zaphod1984/timr.git"
