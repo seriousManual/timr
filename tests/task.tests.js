@@ -133,7 +133,33 @@ describe('timr', function() {
 
                 expect(t.scheduled()).to.be.false;
             });
-        })
+        });
+
+        describe('modifiers', function () {
+            describe('month', function() {
+                var t;
+
+                beforeEach(function() {
+                    t = new Task();
+                });
+
+                it('should be equal', function() {
+                    var m = moment().add(1, 'month');
+
+                    t.every(1).month();
+
+                    expect(t._calculateNextRun(false).format()).to.be.equal(m.format());
+                });
+
+                it('should be equal', function() {
+                    var m = moment().add(2, 'months');
+
+                    t.every(2).months();
+
+                    expect(t._calculateNextRun(false).format()).to.be.equal(m.format());
+                });
+            });
+        });
     });
 
 });
