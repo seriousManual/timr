@@ -7,6 +7,7 @@
     "url": "https://github.com/seriousManual/timr.git"
   },
   "author": "Manuel Ernst <seriousStuff@gmx.de>",
+  "license": "MIT",
   "dependencies": {
     "moment": "^2.1.0"
   },
