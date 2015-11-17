@@ -1,4 +1,4 @@
-# timr [![Build Status](https://travis-ci.org/zaphod1984/timr.png)](https://travis-ci.org/zaphod1984/timr)
+# timr [![Build Status](https://travis-ci.org/seriousManual/timr.png)](https://travis-ci.org/seriousManual/timr)
 
 [![NPM](https://nodei.co/npm/timr.png)](https://nodei.co/npm/timr/)
 
