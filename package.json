@@ -4,7 +4,7 @@
   "version": "0.1.10",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zaphod1984/timr.git"
+    "url": "https://github.com/seriousManual/timr.git"
   },
   "author": "Manuel Ernst <zaphod84@gmx.de>",
   "dependencies": {
