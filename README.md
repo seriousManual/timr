@@ -137,7 +137,9 @@ myTask.run();
 ```
 
 #### event handler attached to the scheduler
-creates the task, configures it to run every minute and runs the callback assigned in the run handler.
+creates two anonymous tasks, configures to run the first every minute and the second to run every second hour.
+
+than the events emitted on the scheduler are used to consume the task events.
 
  `run` has to be called.
 ```javascript
