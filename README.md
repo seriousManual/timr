@@ -80,7 +80,8 @@ via the methods `.from(timestamp)` and `.to(timestamp)` the period of time can b
 these methods can be used in every combination or can be omitted completely. (which would case a task to run instantly and indefinitely.
 
 #### how often
-the quantifier `.every(n)` in combination with a interval modifier like `.hour()`, `.minute()` etc defines how often a task gets executed.
+the quantifier `.every(n)` in combination with a interval modifier like `.hour()`, `.minute()` etc defines how often a task gets executed.  
+the `n` parameter can be omitted, it defaults to `1`. (`task.every().minute()` means that a task is executed once a minute)
 
 for example the expression `task.every(2).minutes()` executes the task every 2 minutes.
 there are five interval modifiers: `.second()`, `.minute()`, `.hour()`, `.day()`, `.month()`
