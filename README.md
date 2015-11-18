@@ -72,6 +72,20 @@ taskConstructor.scheduler.on('execute', function(name, task) {
 
 ## task
 
+### modifiers
+specify how often and when a task should be performed.
+
+#### when
+via the methods `.from(timestamp)` and `.to(timestamp)` the period of time can be specified in which the task should be performed.
+these methods can be used in every combination or can be omitted completely. (which would case a task to run instantly and indefinitely.
+
+#### how often
+the quantifier `.every(n)` in combination with a interval modifier like `.hour()`, `.minute()` etc defines how often a task gets executed.
+
+for example the expression `task.every(2).minutes()` executes the task every 2 minutes.
+there are five interval modifiers: `.second()`, `.minute()`, `.hour()`, `.day()`, `.month()`
+for every modifier also the plural form is valid. (e.g. `.minutes()` instead of `.minute()`)
+
 ### creation
 tasks geht automatically attached to the parent scheduler object
 ```javascript
