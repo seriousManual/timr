@@ -84,7 +84,14 @@ the quantifier `.every(n)` in combination with a interval modifier like `.hour()
 the `n` parameter can be omitted, it defaults to `1`. (`task.every().minute()` means that a task is executed once a minute)
 
 for example the expression `task.every(2).minutes()` executes the task every 2 minutes.
-there are five interval modifiers: `.second()`, `.minute()`, `.hour()`, `.day()`, `.month()`
+
+there are five interval modifiers:   
+`.second()`  
+`.minute()`  
+`.hour()`  
+`.day()`  
+`.month()`
+
 for every modifier also the plural form is valid. (e.g. `.minutes()` instead of `.minute()`)
 
 ### creation
